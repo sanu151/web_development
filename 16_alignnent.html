@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alignment</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;700&family=Roboto:wght@300;500&family=Rubik+Puddles&family=Ubuntu:wght@300;400&display=swap"
+        rel="stylesheet">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Ubuntu', sans-serif;
+        }
+
+        .container {
+            border: 4px solid black;
+            width: 800px;
+            background-color: aqua;
+            margin: 30px auto;
+        }
+
+        .item {
+            border: 4px solid blue;
+            padding: 12px 3px;
+            margin: 12px 3px;
+            background-color: violet;
+
+        }
+
+        #fruit {
+            float: left;
+            width: 48%;
+        }
+
+        #computer {
+            float: right;
+            width: 48%;
+        }
+
+        #stationary {
+            clear: both;
+            width: 100%;
+        }
+
+        p {
+            text-align: right;
+            text-align: left;
+            text-align: center;
+            text-align: justify;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Welcome to my Store</h1>
+        <div id="fruit" class="item">
+            <h3>Fruit</h3>
+            <p class="fruitpara">Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, sint esse? Voluptatem
+                fugiat accusamus aperiam provident eos iure nisi rerum eligendi excepturi, at quae asperiores quia
+                placeat ipsa omnis rem quos modi molestiae amet velit vel praesentium! Fuga, dignissimos culpa. Lorem,
+                ipsum dolor sit amet consectetur adipisicing elit. Ipsa at, repellendus nostrum veritatis autem
+                reiciendis libero nulla, voluptates illum corrupti hic iusto voluptatum sequi eaque, exercitationem eum
+                quo? Laboriosam cumque dignissimos commodi sapiente aspernatur repudiandae vel magnam minus nobis at?
+            </p>
+        </div>
+
+        <div id="computer" class="item">
+            <h3>Computer</h3>
+            <p class="computerpara">Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, sint esse?
+                Voluptatem
+                fugiat accusamus aperiam provident eos iure nisi rerum eligendi excepturi, at quae asperiores quia
+                placeat ipsa omnis rem quos modi molestiae amet velit vel praesentium! Fuga, dignissimos culpa. Lorem
+                ipsum dolor sit amet consectetur, adipisicing elit. Asperiores enim placeat dolorem quod praesentium
+                eaque necessitatibus optio, consequatur quo! Tempora, sint minima dolor accusamus perspiciatis aut
+                accusantium laudantium doloremque asperiores ducimus voluptas dolorem quas possimus, totam a
+                reprehenderit ratione ab?</p>
+        </div>
+
+        <div id="stationary" class="item">
+            <h3>Stationary</h3>
+            <p class="stationary">Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, sint esse? Voluptatem
+                fugiat accusamus aperiam provident eos iure nisi rerum eligendi excepturi, at quae asperiores quia
+                placeat ipsa omnis rem quos modi molestiae amet velit vel praesentium! Fuga, dignissimos culpa.</p>
+        </div>
+
+        <div id="glasses" class="item">
+            <h3>Glasses</h3>
+            <p class="glassespara">Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, sint esse? Voluptatem
+                fugiat accusamus aperiam provident eos iure nisi rerum eligendi excepturi, at quae asperiores quia
+                placeat ipsa omnis rem quos modi molestiae amet velit vel praesentium! Fuga, dignissimos culpa.</p>
+        </div>
+    </div>
+</body>
+
+</html>

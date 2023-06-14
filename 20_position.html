@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Position absolute, relative, fixed and sticky in CSS </title>
+    <style>
+        .container{
+            margin: 100px;
+        }
+        .box{
+            display: inline-block;
+            width: 15%;
+            height: 70px;
+            border: 2px solid black;
+        }
+        #box1{
+            background-color: blue;
+        }
+        #box2{
+            position: absolute;
+            top: 30px;
+            left: 30px;
+            background-color: red;
+        }
+        #box3{
+            position: absolute;
+            top: 50px;
+            left: 50px;
+            background-color: green;
+        }
+        #box4{
+            position: absolute;
+            top: 70px;
+            left: 70px;
+            background-color: yellow;
+        }
+        #box7{
+            position: relative;
+            top: 70px;
+            left: 70px;
+            background-color: yellow;
+        }
+        #box10{
+            position: fixed;
+            top: 70px;
+            right: 10px;
+            background-color: rgb(26, 11, 240);
+        }
+        .fixed{
+            height: 4000px;
+        }
+        #box11{
+            position: sticky;
+            top: 70px;
+            background-color: orange;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box" id="box1">1</div>
+        <div class="box" id="box2">2</div>
+        <div class="box" id="box3">3</div>
+        <div class="box" id="box4">4</div>
+    </div>
+    <div class="container">
+        <div class="box" id="box5">5</div>
+        <div class="box" id="box6">6</div>
+        <div class="box" id="box7">7</div>
+        <div class="box" id="box8">8</div>
+    </div>
+    <div class="container fixed">
+        <div class="box" id="box9">9</div>
+        <div class="box" id="box10">10</div>
+        <div class="box" id="box11">11</div>
+        <div class="box" id="box12">12</div>
+    </div>
+</body>
+</html>

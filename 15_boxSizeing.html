@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box Sizing</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            background-color: rgb(242, 167, 242);
+        }
+        .container{
+            padding: 30px;
+            border: 10px solid #77031e;
+            margin: 30px;
+            background-color: #7c93ef;
+            width: 500px;
+            border-radius: 30px;
+            box-sizing: border-box;
+        }
+        #second{
+            padding: 10px 20px 30px 40px;   /*Top Bottom Left right*/
+            margin: 40px 30px 20px 10px ;    /*Top Bottom Left right*/
+            border-left: 40px solid red;
+            border-right: 30px solid green;
+            border-top: 20px solid yellow;
+            border-bottom: 40px solid blue;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h3>This is my Header</h3>
+        <p id="first">Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati impedit quos neque placeat doloremque, aut maiores quam magni deleniti corrupti incidunt magnam facere doloribus eligendi? Fugit tempora reiciendis aliquam, repellendus dolores enim! Ex, corrupti aperiam quia inventore quam praesentium. Eligendi?</p>
+    </div>
+
+    <div class="container">
+        <h3>This is my Header</h3>
+        <p id="second">Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati impedit quos neque placeat doloremque, aut maiores quam magni deleniti corrupti incidunt magnam facere doloribus eligendi? Fugit tempora reiciendis aliquam, repellendus dolores enim! Ex, corrupti aperiam quia inventore quam praesentium. Eligendi?</p>
+    </div>
+
+    <div class="container">
+        <h3>This is my Header</h3>
+        <p id="Third">Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati impedit quos neque placeat doloremque, aut maiores quam magni deleniti corrupti incidunt magnam facere doloribus eligendi? Fugit tempora reiciendis aliquam, repellendus dolores enim! Ex, corrupti aperiam quia inventore quam praesentium. Eligendi?</p>
+    </div>
+</body>
+</html>

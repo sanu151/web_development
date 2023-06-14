@@ -1,0 +1,126 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Rubik', sans-serif;
+    background: linear-gradient(rgba(255, 69, 1, 0.4),
+            rgba(255, 69, 0, 0.4)), url('/images/bg.jpg');
+    color: azure;
+}
+
+header {
+    height: 50px;
+    padding-top: 15px;
+    position: sticky;
+    top: 0px;
+}
+
+.left {
+    display: inline-block;
+    position: absolute;
+    left: 50px;
+}
+
+.mid {
+    display: block;
+    width: 40%;
+    margin: 5px auto;
+}
+
+.right {
+    display: inline-block;
+    position: absolute;
+    right: 50px;
+    top: 20px;
+}
+
+.right a {
+    background-color: white;
+    padding: 4px 4px;
+    margin: 0 5px;
+    border-radius: 20px;
+    width: 20px;
+    text-align: center;
+    text-decoration: none;
+}
+
+.right a:hover {
+    background-color: rgb(50, 42, 42);
+}
+
+.logo {
+    width: 60px;
+    margin: -24px;
+    /* filter: invert(100%); */
+}
+
+.sanu {
+    font-size: 1.2rem;
+    margin-left: 15px;
+}
+
+.navbar {
+    margin: 0 10px;
+}
+
+.navbar li {
+    list-style: none;
+    display: inline-block;
+    padding: 0 20px;
+}
+
+.navbar li a {
+    text-decoration: none;
+    color: azure;
+}
+
+.navbar li a:hover,
+.navbar li a.active {
+    color: chartreuse;
+    font-size: 1.03rem;
+}
+
+.container {
+    border: 2px solid white;
+    width: 30%;
+    border-radius: 13px;
+    margin: 28px 45px;
+    padding: 21px 21px;
+}
+
+.container h3 {
+    display: block;
+    width: 70%;
+    margin: 20px auto;
+    text-decoration: underline;
+}
+
+.form-group input,
+label {
+    text-align: center;
+    display: block;
+    width: 70%;
+    padding: 6px;
+    border: 2px solid white;
+    border-radius: 14px;
+    margin: 10px auto;
+    background-color: #700b01;
+    font-size: 17px;
+    color: rgb(232, 224, 224);
+    font-family: 'Rubik', sans-serif;
+}
+
+.form-group input[type="button" i] {
+    display: inline-block;
+    margin: 7px 61px;
+    width: 72%;
+    background-color: brown;
+    font-size: 20px;
+    color: white;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.form-group input[type="button" i]:hover {
+    background-color: bisque;
+    color: brown;
+}
