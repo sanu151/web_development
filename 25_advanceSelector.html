@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advance CSS selector </title>
+    <style>
+        p{
+            text-align: center;
+        }
+        div li p{
+            background-color: red;
+            color: white;
+        }
+        div p{
+            background-color: green;
+            color: yellow;
+        }
+        div > p{
+            background-color: aqua;
+            color: black;
+        }
+        div + p{
+            background-color: blue;
+            color: aqua;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div>
+            <ul>
+                <li><p>This is paragraph under ul </p></li>
+            </ul>
+            <p>This is paragraph under div > div </p>
+        </div>
+        <p>This is paragraph under div.container </p>
+    </div>
+    <p>This is paragraph under body </p>
+</body>
+</html>
