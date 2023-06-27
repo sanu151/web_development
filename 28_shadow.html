@@ -4,8 +4,44 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Box Shadow & Text Shadow </title>
+    <style>
+        .container{
+            display: flex;
+        }
+
+        .card{
+            padding: 23px 34px;
+            border: 2px solid red;
+            margin: 30px 15px;
+            background-color: khaki;
+            box-shadow: 10px 12px green;
+        }
+        #card-2{
+            box-shadow: -10px -12px brown;
+        }
+
+        #card-3{
+            box-shadow: 4px 5px 12px blue;
+        }
+        .card h2{
+            text-shadow: 2px 4px aqua;
+        }
+    </style>
 </head>
 <body>
-    
+    <div class="container">
+        <div class="card" id="card-1">
+            <h2>This is C++ Course </h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta molestiae voluptates, debitis veniam porro asperiores velit ut beatae eos placeat numquam quasi voluptas hic amet et ipsum ex enim totam at harum. Consectetur natus nesciunt provident minus mollitia quo consequuntur.</p>
+        </div>
+        <div class="card" id="card-2">
+            <h2>This is HTML Course </h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta molestiae voluptates, debitis veniam porro asperiores velit ut beatae eos placeat numquam quasi voluptas hic amet et ipsum ex enim totam at harum. Consectetur natus nesciunt provident minus mollitia quo consequuntur.</p>
+        </div>
+        <div class="card" id="card-3">
+            <h2>Card3 </h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta molestiae voluptates, debitis veniam porro asperiores velit ut beatae eos placeat numquam quasi voluptas hic amet et ipsum ex enim totam at harum. Consectetur natus nesciunt provident minus mollitia quo consequuntur.</p>
+        </div>
+    </div>
 </body>
 </html>

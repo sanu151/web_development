@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Key frames and Animation </title>
+    <style>
+        .container{
+            background-color: greenyellow;
+        }
+        .box{
+            position: relative;
+            width: 250px;
+            height: 250px;
+            background-color: green;
+            animation-name: sanu;
+            animation-duration: 3s;
+            animation-iteration-count: infinite;
+            /* animation-fill-mode: forwards; */
+            /* animation-fill-mode: alternet; */
+            animation-timing-function: ease-in-out;
+            animation-delay: 2s;
+            animation-direction: alternate-reverse;
+        }
+
+        .box1{
+            position: relative;
+            width: 250px;
+            height: 250px;
+            background-color: blue;
+            animation: sanu1 5s ease-in 2s infinite alternate-reverse ;
+        }
+
+        @keyframes sanu  {
+            from{
+                width: 200px;
+                background-color: green;
+            }
+            to{
+                width: 80%;
+                background-color: red;
+            }
+        }
+
+        @keyframes sanu1 {
+            0%{
+                top: 0px;
+                left: 0px;
+            }
+            25%{
+                top: 250px;
+                left: 0px;
+            }
+            75%{
+                top: 250px;
+                left: 250px;
+            }
+            100%{
+                top: 0px;
+                left: 250px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+            This is a Box
+        </div>
+    </div>
+    <div class="container">
+        <div class="box1">
+            This is a Box
+        </div>
+    </div>
+</body>
+</html>
