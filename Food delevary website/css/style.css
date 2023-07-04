@@ -4,6 +4,10 @@
     padding: 0;
 }
 
+html{
+    scroll-behavior: smooth;
+}
+
 /* CSS Variables */
 :root {
     --navbar-hight: 60px;
@@ -16,7 +20,6 @@
     display: flex;
     align-items: center;
     position: fixed;
-    top: 0;
     width: 100%;
 }
 
@@ -71,7 +74,7 @@
 #home {
     display: flex;
     flex-direction: column;
-    height: 450px;
+    height: 500px;
     padding: 3px 200px;
     justify-content: center;
     align-items: center;
@@ -84,8 +87,8 @@
     top: 0;
     height: 450px;
     width: 100%;
-    z-index: -1;
-    opacity: 0.7;
+    z-index: -2;
+    opacity: 0.75;
 }
 
 #home h1{
@@ -98,6 +101,7 @@
     font-size: 1.5rem;
     font-family: 'Ubuntu', sans-serif;
     color: var(--text-color);
+    text-align: center;
 }
 
 /* Service Section  */
@@ -120,8 +124,8 @@
 
 /* Client section */
 #client-section{
-    height: 300px;
     justify-content: center;
+    height: 300px;
 }
 
 #client-section::before{
@@ -141,7 +145,7 @@
 }
 
 .client-item{
-    padding: 34px;
+    padding: 29px;
 }
 
 .clients img{
@@ -201,13 +205,13 @@
 /* Footer Section  */
 footer div{
     display: flex;
-    height: 40px;
     background: black;
     color: white;
     align-items: center;
     justify-content: center;
     font-size: 1.3rem;
     font-family: 'Ubuntu', sans-serif;
+    text-align: center;
 
 }
 
@@ -232,6 +236,7 @@ footer div{
     font-size: 3.5rem;
     padding: 22px;
     font-family: 'Ubuntu', sans-serif;
+    text-align: center;
 }
 
 .h-secondary {

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spanning Multiple Rows & Columns in Grid</title>
+    <style>
+        .grid{
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            grid-template-rows: repeat(5, 3fr);
+            /* grid-column-gap: 5rem;
+            grid-row-gap: 1rem; */
+            grid-gap: 1rem;
+        }
+
+        .item{
+            background-color: rgb(239, 149, 205);
+            border: 2px solid black;
+            padding: 23px;
+            text-align: center;
+        }
+        .item:first-child{
+            /* grid-column-start: 1;
+            grid-column-end: 3;
+            grid-row-start: 1;
+            grid-row-end: 3; */
+
+            grid-column: 1/ span 3;
+            grid-row: 1/ span 3;
+        }
+
+    </style>
+</head>
+<body>
+   <div class="grid">
+        <div class="item">This is Box - 1</div>
+        <div class="item">This is Box - 2</div>
+        <div class="item">This is Box - 3</div>
+        <div class="item">This is Box - 4</div>
+        <div class="item">This is Box - 5</div>
+        <div class="item">This is Box - 6</div>
+        <div class="item">This is Box - 7</div>
+        <div class="item">This is Box - 8</div>
+        <div class="item">This is Box - 9</div>
+        <div class="item">This is Box - 10</div>
+        <div class="item">This is Box - 11</div>
+        <div class="item">This is Box - 12</div>
+        <div class="item">This is Box - 13</div>
+        <div class="item">This is Box - 14</div>
+        <div class="item">This is Box - 15</div>
+   </div> 
+</body>
+</html>
