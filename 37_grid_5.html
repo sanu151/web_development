@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Grid Template Area</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            display: grid;
+            grid-gap: 1rem;
+            grid-template-areas:
+                'navbar navbar navbar navbar'
+                'section section section aside'
+                'footer footer footer footer'
+            ;
+        }
+
+        .grid {
+            background-color: yellow;
+            border: 3px solid black;
+            padding: 10px 23px;
+        }
+
+        .item {
+            padding: 10px 23px;
+        }
+
+        #navbar {
+            grid-area: navbar;
+            display: flex;
+            flex-direction: row;
+
+        }
+
+        #section {
+            grid-area: section;
+        }
+
+        #aside {
+            grid-area: aside;
+        }
+
+        #aside .image {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+        }
+
+        #aside img {
+            width: 100px;
+            border: 4px solid red;
+            border-radius: 30px;
+        }
+
+        #footer {
+            grid-area: footer;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div id="navbar" class="grid">
+            <div class="item">Irem - 1</div>
+            <div class="item">Irem - 2</div>
+            <div class="item">Irem - 3</div>
+            <div class="item">Irem - 4</div>
+        </div>
+        <div id="section" class="grid">
+            <div class="item">Irem - 5</div>
+            <div class="item">Irem - 6</div>
+            <div class="item">Irem - 7</div>
+            <div class="item">Irem - 8</div>
+            <div class="item">Irem - 9</div>
+            <div class="item">Irem - 10</div>
+            <div class="item">Irem - 11</div>
+            corporis temporibus ad itaque architecto voluptatem qui minima deleniti in porro incidunt totam! Sed
+            repellat error debitis voluptate reiciendis eligendi dolore necessitatibus unde quidem ipsam pariatur
+            soluta, sint, accusantium recusandae? Provident voluptate eos itaque tempore pariatur velit id ullam illo
+            assumenda tenetur, nam soluta aliquid non expedita facilis blanditiis sapiente, nesciunt rerum, animi in
+            vitae. Quisquam ex hic debitis dolore, molestiae corporis similique cumque laborum velit doloribus amet
+            officia illum dolorem repellat voluptate voluptas, accusamus reprehenderit alias necessitatibus veritatis,
+            facere vero animi quam. Ea nihil, minus reiciendis rerum accusantium explicabo officia mollitia eaque quo
+            laboriosam nostrum molestias labore debitis minima harum impedit facilis culpa nesciunt iste, odit sed
+            repellat. Nulla ut, voluptatum consectetur eius, aspernatur nostrum, ducimus aliquid a quod itaque eligendi
+            accusamus dicta inventore mollitia labore. Dolor ab, impedit recusandae nostrum eveniet in fugit doloribus
+            amet maiores possimus illo non facilis tempora, neque ad assumenda necessitatibus autem veritatis
+            consequuntur. Iste accusamus itaque ipsum, nesciunt voluptatem delectus explicabo dicta et sequi? Ab, quia
+            maiores aut omnis velit sequi? Tenetur, quis veniam, eos debitis voluptatum nobis amet quidem aspernatur
+            placeat odit reiciendis ducimus sit fugit dicta unde velit necessitatibus nam incidunt ipsum voluptatem?
+            Eligendi amet excepturi veritatis tenetur optio id quaerat? Quos architecto consequuntur laboriosam autem
+            quam amet assumenda aperiam pariatur cumque optio nostrum soluta inventore, nisi officiis rerum molestias
+            temporibus sequi tempora aliquam sunt? Officiis id inventore repudiandae recusandae mollitia vitae accusamus
+            voluptas optio voluptatem. Quod rem nisi quia voluptate aliquid rerum molestiae veniam veritatis
+            necessitatibus explicabo corrupti, asperiores nam cum ipsa voluptates perspiciatis quas accusamus beatae
+            atque tenetur dolore aut assumenda placeat? Quibusdam adipisci cupiditate nihil excepturi dolor omnis libero
+            eos ut exercitationem dignissimos, modi quis reprehenderit similique reiciendis impedit ab sequi officiis
+            ullam totam ad iure sapiente eum facilis. Ducimus amet tempore quasi sunt laborum dolorem voluptates aut
+            quisquam ipsum laboriosam sit aliquid vitae numquam eaque, aspernatur reprehenderit sint soluta!
+        </div>
+        <div id="aside" class="grid">
+            <div class="image">
+                <div class="item"><img src="img/img1.png" alt="image1 "></div>
+                <div class="item"><img src="img/img2.png" alt="image2 "></div>
+                <div class="item"><img src="img/img3.png" alt="image3 "></div>
+            </div>
+            iure hic quidem harum! Beatae quo natus adipisci praesentium cumque, maiores perferendis quidem, ad magnam
+            molestias et, vel quis commodi repudiandae eaque ut. Facere eligendi hic officiis facilis quod soluta, sit
+            atque recusandae delectus minima amet iste repellat aperiam consequuntur quasi? Quisquam libero illum magnam
+            accusantium corrupti maxime eaque magni dolores earum dicta consequatur, exercitationem voluptatibus
+            accusamus officiis laudantium? Sunt unde commodi nostrum blanditiis. Dignissimos assumenda praesentium
+            consequuntur fugit rem saepe nulla aspernatur accusamus deserunt nesciunt libero hic ipsam veniam pariatur
+            voluptas beatae itaque amet, totam quisquam quidem harum quas. Ipsam odit quos harum veritatis ab doloribus
+            laudantium amet veniam maiores, corporis temporibus ad itaque architecto voluptatem qui minima deleniti in
+            porro incidunt totam! Sed repellat error debitis voluptate reiciendis eligendi dolore necessitatibus unde
+            quidem ipsam pariatur soluta, sint, accusantium recusandae? Provident voluptate eos itaque tempore pariatur
+            velit id ullam illo assumenda tenetur, nam soluta aliquid non expedita facilis blanditiis sapiente, nesciunt
+            rerum, animi in vitae. Quisquam ex hic debitis dolore, molestiae corporis similique cumque laborum velit
+        </div>
+        <div id="footer" class="grid">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit iste nam quasi, vel veritatis similique minima
+            in voluptatum dignissimos!
+        </div>
+    </div>
+</body>
+
+</html>
