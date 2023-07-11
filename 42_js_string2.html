@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript String Tutorial 2</title>
+    <style>
+
+    </style>
+</head>
+<body>
+    
+    <script>
+        var str = "This is a string";
+        console.log(str);
+        var position = str.indexOf('is');
+        console.log(position);
+        position = str.lastIndexOf('is');
+        console.log(position);
+
+        var substr = str.slice(1, 6); // it takes 1st position to 6th position characters from str.
+        console.log(substr);
+        substr = str.substring(2, 6); // it takes 2nd position to 6th position characters from str.
+        console.log(substr);
+        substr = str.substr(3, 8); // it takes from 3rd position and take 8 character from 3rd position.
+        console.log(substr);
+
+        var replace = str.replace('a string', 'Sanu');
+        console.log(str);
+        console.log(replace);
+
+        console.log(str.toUpperCase());
+        console.log(str.toLowerCase());
+
+        var strwithwhiteSpaces = '              This is     a string with       white spaces     ';
+        console.log(strwithwhiteSpaces);
+        console.log(strwithwhiteSpaces.trim());
+
+        var newstring = str.concat(' New String');
+        console.log(newstring);
+
+        var char2 = str.charAt(2);
+        console.log(char2);
+        var charcode2 = str.charCodeAt(2);
+        console.log(charcode2);
+    </script>
+</body>
+</html>

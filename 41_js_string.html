@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String in Javascript</title>
+</head>
+<body>
+    <div class="container">
+        <h1>This is a hader </h1>
+        <div id="content"></div>
+        <div class="para">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum aspernatur tenetur minus quo, esse, distinctio vero iusto, illum molestias nihil ut atque.</p>
+        </div>
+    </div>
+
+    <script>
+        var string1 = "Hello";
+        var string2 = " World";
+        console.log(string1 + string2);
+        var name = "Sanu";
+        var channel = "Banger Masi";
+        var temp = `Hi, my name is ${name}. My youtube channel's name is : "${channel}"`;
+        console.log(temp);
+        var len = temp.length;
+        console.log(`Length of this message is : ${len}`);
+
+        console.log('Hello\tWorld\nSanu\\n');
+
+        document.getElementById('content').innerHTML = '<h3>This is an h3 heading dynamicaly inserted by JS </h3>';
+    </script>
+</body>
+</html>

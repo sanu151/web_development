@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conditionals in Javascript</title>
+</head>
+<body>
+    <div class="container">
+        <ul>
+            <li>item - 1</li>
+            <li>item - 2</li>
+            <li>item - 3</li>
+            <li>item - 4</li>
+            <li>item - 5</li>
+        </ul>
+    </div>
+
+    <script>
+        let age = 4;
+        if(age > 18)
+        {
+            console.log('You can drink Beer');
+        }
+        else if(age < 5)
+        {
+            console.log('You can drink milk')
+        }
+        else
+        {
+            console.log('You can drink Cold drinks');
+        }
+
+        let cup = 34;
+        switch (cup) {
+            case 4:
+                console.log("Total cup is 4")
+                break;
+            
+            case 31:
+                console.log("Total cup is 31")
+                break;
+            
+            case 32:
+                console.log("Total cup is 32")
+                break;
+            
+            case 33:
+                console.log("Total cup is 33")
+                break;
+            
+            default:
+                console.log("None of this value 4, 31, 32, 33");
+                break;
+        }
+    </script>
+</body>
+</html>

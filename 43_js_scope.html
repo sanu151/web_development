@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scope of variables in Javascript</title>
+</head>
+<body>
+    <div class="container">
+        <ul>
+            <li>item - 1</li>
+            <li>item - 2</li>
+            <li>item - 3</li>
+            <li>item - 4</li>
+            <li>item - 5</li>
+        </ul>
+    </div>
+
+    <script>
+        var string = 'This is a string';
+        var string = 'This is a string2';
+        console.log(string);
+
+        let str1 = "This is str1 global";
+        {
+            let str1 = 'This is str1 inside block';
+            console.log(str1);
+        }
+        console.log(str1);
+
+        const str2 = 'This can not be changed !';
+        // str2 = 'I want to change the string';
+        // If we try to change the constant it will through an error 
+        console.log(str2);
+    </script>
+</body>
+</html>
