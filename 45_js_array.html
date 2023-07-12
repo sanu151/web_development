@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrays in Javascript</title>
+</head>
+<body>
+    <h1>Arrays in Javascript</h1>
+    <script>
+        let employee = {
+            name: "Supriyo Das",
+            salary: 30000,
+            age: 35,
+            position: "Technical Assistant",
+            gener: "Male",
+            'channel name': "My programming channel"
+        }
+        console.log(employee);
+        console.log(employee.position);
+        console.log(employee['channel name']);
+
+        let arr = [34, 5, "Supriyo", true, 55, undefined, 1, 23.55, "Rupa"];
+        arr = arr.sort();
+        console.log(arr);
+
+        let arr1 = new Array(34, 3, 555, false, "Sanu", 89, "good");
+        console.log(arr1);
+        console.log(arr1[4]);
+        arr1.push("Pushed item");
+        console.log(arr1);
+
+        let arr2 = new Array(23);
+        console.log(arr2);
+        console.log(arr2[3]);
+    </script>
+</body>
+</html>
