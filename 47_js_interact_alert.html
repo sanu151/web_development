@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interact using Alert Prompt and Confarm Javascript </title>
+</head>
+<body>
+    <div class="container">
+        This is a Page 
+    </div>
+
+    <script>
+        // Alert in in-browser Javascript, it does not return anything. It only showing the message.
+        // alert("This is a Massage!");
+
+        // Prompt in Javascript
+        // let name = prompt("What is your name?", "Guest");
+        // console.log(name);
+
+        // Conferm in Javascript 
+        let dltpost = confirm("Are you really want to delete the post?");
+        if(dltpost){
+            console.log("Your post is deleted successfully.");
+        }
+        else{
+            console.log("Your post is not been deleted");
+        }
+    </script>
+</body>
+</html>
