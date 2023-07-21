@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SetInterval and SetTimeout in JavaScript</title>
+</head>
+<body>
+    <div class="container">
+        <h1 id="heading">
+            This is a container 
+        </h1>
+            
+    </div>
+
+    <script>
+        function greek(name, greet){
+            let heading = document.getElementById('heading');
+            heading.innerHTML = 'Hello ' + name + ':D ' + greet
+        }
+
+        setTimeout(greek, 5000, 'Supriyo', 'Good Morning');
+    </script>
+</body>
+</html>
