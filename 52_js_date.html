@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Date in JavaScript</title>
+</head>
+<body>
+    <div id="container">
+        This is a Container
+    </div>
+
+    <script>
+        function timeNow(){
+            let date = new Date();
+            let container = document.getElementById('container');
+            container.innerHTML = 'Time Now : ' + date;
+        }
+
+        setInterval(timeNow, 1000);
+
+    </script>
+</body>
+</html>
