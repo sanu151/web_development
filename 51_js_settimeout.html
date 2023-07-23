@@ -8,9 +8,11 @@
 <body>
     <div class="container">
         <h1 id="heading">
-            This is a container 
+            This is a container
         </h1>
-            
+        <span>
+            <h3>Time Now : </h3> <h3 id="time"></h3> 
+        </span>
     </div>
 
     <script>
@@ -19,7 +21,24 @@
             heading.innerHTML = 'Hello ' + name + ':D ' + greet
         }
 
-        setTimeout(greek, 5000, 'Supriyo', 'Good Morning');
+        let timeOut = setTimeout(greek, 5000, 'Supriyo', 'Good Morning');
+        console.log(timeOut);
+        //clearTimeout(timeOut);
+        
+        function grt(name, greet){
+            let heading = document.getElementById('heading');
+            console.log('Hello ' + name + ':D ' + greet);
+        }
+        let intervalId = setInterval(grt, 1000, "Supriyo", "Good Night");
+        clearInterval(intervalId);
+
+        function displayTime(){
+            let time = new Date();
+            document.getElementById('time').innerHTML = time;
+        }
+        setInterval(displayTime, 1000);
+
+
     </script>
 </body>
 </html>
