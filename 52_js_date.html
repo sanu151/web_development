@@ -9,6 +9,9 @@
     <div id="container">
         This is a Container
     </div>
+    <div id="birthday">
+
+    </div>
 
     <script>
         function timeNow(){
@@ -18,6 +21,10 @@
         }
 
         setInterval(timeNow, 1000);
+
+        let newdate = new Date(1987, 7, 23, 4, 50, 49);
+        let btdate = document.getElementById('birthday');
+        btdate.innerHTML = 'My Birthday is : ' + newdate.getDate() + '/' + newdate.getMonth() + '/' + newdate.getFullYear() + '(' + newdate.getDay() + ')';
 
     </script>
 </body>
