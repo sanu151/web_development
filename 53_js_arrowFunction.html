@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrow function in JavaScript</title>
+</head>
+<body>
+    <div class="container">Radious of time is : <span id="rad"></span>  </div>
+
+    <script>
+        let func1 = () => {console.log('Good Morning Supriyo');}
+        func1();
+
+        let radious = (a) => a*a*2.13;
+        let rad = document.getElementById('rad');
+
+        setInterval(() => {
+            let now = new Date();
+            rad.innerHTML = radious(now.getSeconds());
+        }, 2000)
+
+        let obj1 = {
+            greeting: "Good Morning",
+            names: ["Sanu", "Rupa", "Rishika"],
+            speak(){this.names.forEach((students) => {
+                console.log(this.greeting + " Kukuroo KOO " + students);
+            });
+            }
+        }
+        obj1.speak();
+    </script>
+</body>
+</html>

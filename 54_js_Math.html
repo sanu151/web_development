@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Math function in JavaScript</title>
+</head>
+<body>
+    <div class="container">
+        This is Math function in JavaScript
+        <div id="mathfunc"></div>
+    </div>
+
+
+    <script>
+        let m = Math;
+        console.log(m);
+
+        console.log(m.E);
+        console.log(m.LN10);
+        console.log(m.LN2);
+        console.log(m.LOG10E);
+        console.log(m.PI);
+        console.log(m.SQRT1_2);
+
+        let a = 23.1546542;
+        let b = 564;
+
+        console.log('The value of a and b is : ', a, b);
+        console.log('The rounded value of a and b is : ', Math.round(a), Math.round(b));
+
+        console.log('Two raise to the power three is : ', Math.pow(2, 3));
+        console.log('Twenty two raise to the power twelve is : ', Math.pow(22, 12));
+        console.log('Three raise to the power nine is : ', Math.pow(3, 9));
+
+        console.log('Squre root of 36 is : ', Math.sqrt(36));
+        console.log('Squre root of 81 is : ', Math.sqrt(81));
+        console.log('Squre root of 55 is : ', Math.sqrt(55));
+
+        console.log('Floor value of 5.232 is : ', Math.floor(5.232));
+        console.log('Ciling value of 5.232 is : ', Math.ceil(5.232));
+
+        console.log('Absolute value of -5.343 is : ', Math.abs(-5.343));
+
+        console.log('The value of sin(45) is ', Math.sin(45));
+        console.log('The value of cos(55) is ', Math.cos(55));
+        console.log('The value of tan(70) is ', Math.tan(70));
+
+        console.log('Minimum value of 14, 5, 23, 55 is : ', Math.min(14, 5, 23, 55));
+        console.log('Maximum value of 14, 5, 23, 55 is : ', Math.max(14, 5, 23, 55));
+
+        console.log('Generating random number between 0, 1 : ', Math.random());
+        let a1 = 1;
+        let b1 = 100;
+        let r1 = a1 + (b1-a1)*Math.random();
+        console.log('Generating random intiger between 1, 100 : ', Math.round(r1));
+    </script>
+</body>
+</html>
