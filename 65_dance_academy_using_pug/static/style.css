@@ -1,0 +1,61 @@
+
+  @import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Silkscreen&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#navigation {
+    background-color: black;
+    padding: 14px 4px;
+}
+#navigation ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+#navigation li{
+    list-style: none;
+    padding: 2px 15px;
+}
+
+#navigation li a{
+    color: azure;
+    font-family: 'Dancing Script', cursive;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 4px 20px;
+    cursor: pointer;
+}
+
+#introSection::before {
+    position: absolute;
+    top: 53px;
+    content: "";
+    background: center / contain no-repeat url(../static/dance_bg.jpg);
+    height: 392px;
+    width: 100%;
+    opacity: 0.6;
+    z-index: -1;
+}
+#introSection {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(170, 255, 0);
+    height: 392px;   
+}
+
+#sponcerSection {
+    height: 300px;
+    background-color: yellow;
+}
+
+#footer {
+    height: 100px;
+    background-color: brown;
+}
