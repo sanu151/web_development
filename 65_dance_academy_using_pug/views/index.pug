@@ -1,11 +1,15 @@
 doctype html
 html
   head
+    title Sanu Dance Academy
     style
       include ../static/style.css
   body
     nav#navigation
-        ul 
+        ul
+            div#logo 
+                img(src="../static/logo.png")
+                | SDA 
             li #[a(href="/") Home ]
             li #[a(href="/") About ]
             li #[a(href="/") Service ]
@@ -13,13 +17,45 @@ html
             li #[a(href="/") Contact Us ]
     
     section#introSection 
-        | Section for Picture
+        div Welcome to Sanu's Dance Academy
+        div.small Eat Sleep Dance Repeat
 
+    section#missionSection 
+        h1 Our Mission 
+        div#firstCard
+            div.card
+                h4 Dance Perfection
+                div.card-box 
+                    div.card-img
+                        img(src="../static/pic1.png")
+                    div.card-content
+                        p This is the best dance academy of the universe
+            div.card
+                h4 Dance The Way You Like
+                div.card-box 
+                    div.card-img
+                        img(src="../static/pic2.png")
+                    div.card-content
+                        p This is the best dance academy of the universe
+            div.card
+                h4 Expert Training
+                div.card-box 
+                    div.card-img
+                        img(src="../static/pic3.png")
+                    div.card-content
+                        p This is the best dance academy of the universe
+            
     section#sponcerSection 
-        | Section for Sponcer
+        h1 Our Sponcers
+        div#sponcers
+            img(src="../static/sponcer1.png" alt="Sponcer Image" class="spImage")
+            img(src="../static/sponcer2.png" alt="Sponcer Image" class="spImage")
+            img(src="../static/sponcer3.png" alt="Sponcer Image" class="spImage")
+            img(src="../static/sponcer4.png" alt="Sponcer Image" class="spImage")
+            img(src="../static/sponcer5.png" alt="Sponcer Image" class="spImage")
 
     footer#footer 
-        | Our footer here#[a(href="/") ]
+        | Copyright &#9426; 2023 sanudanceacademy.com | All right reserved
 
     script
       include ../static/script.js
