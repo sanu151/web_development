@@ -1,0 +1,655 @@
+PS C:\Users\dassu> mongosh
+Current Mongosh Log ID: 64f91594b2cbc0a510202667
+Connecting to:          mongodb://127.0.0.1:27017/?directConnection=true&serverSelectionTimeoutMS=2000&appName=mongosh+1.10.6
+Using MongoDB:          7.0.1
+Using Mongosh:          1.10.6
+
+For mongosh info see: https://docs.mongodb.com/mongodb-shell/
+
+
+To help improve our products, anonymous usage data is collected and sent to MongoDB periodically (https://www.mongodb.com/legal/privacy-policy).
+You can opt-out by running the disableTelemetry() command.
+
+------
+   The server generated these startup warnings when booting
+   2023-09-07T05:42:54.215+05:30: Access control is not enabled for the database. Read and write access to data and configuration is unrestricted
+   2023-09-07T05:42:54.215+05:30: This server is bound to localhost. Remote systems will be unable to connect to this server. Start the server with --bind_ip <address> to specify which IP addresses it should serve responses from, or with --bind_ip_all to bind to all interfaces. If this behavior is desired, start the server with --bind_ip 127.0.0.1 to disable this warning
+------
+
+test> db
+test
+test> use sanu
+switched to db sanu
+sanu> show db
+MongoshInvalidInputError: [COMMON-10001] 'db' is not a valid argument for "show".
+sanu> show dbs
+admin   40.00 KiB
+config  12.00 KiB
+local   72.00 KiB
+sanu> db.text
+sanu.text
+sanu> db.text.insert({})
+DeprecationWarning: Collection.insert() is deprecated. Use insertOne, insertMany, or bulkWrite.
+{
+  acknowledged: true,
+  insertedIds: { '0': ObjectId("64f916f6b2cbc0a510202668") }
+}
+sanu> show dbs
+admin   40.00 KiB
+config  60.00 KiB
+local   72.00 KiB
+sanu     8.00 KiB
+sanu> show collections
+text
+sanu> db.items.insertOne({name : "Supriyo Das", dob : "23/07/1987", age : 35, gender : "Male", occupation : "Web Developer"})
+{
+  acknowledged: true,
+  insertedId: ObjectId("64f91f7cb2cbc0a510202669")
+}
+sanu> db.items.find()
+[
+  {
+    _id: ObjectId("64f91f7cb2cbc0a510202669"),
+    name: 'Supriyo Das',
+    dob: '23/07/1987',
+    age: 35,
+    gender: 'Male',
+    occupation: 'Web Developer'
+  }
+]
+
+sanu> db.items.insertMany([{name : "Rupa Das", dob : "26/08/1995", age : 27, gender : "Female", occupation : "Home Maker"}, {name : "Rishika Das", dob : "22/07/2018", age : 05, gender : "Female", occupation : "Student"}])
+{
+  acknowledged: true,
+  insertedIds: {
+    '0': ObjectId("64f920b6b2cbc0a51020266a"),
+    '1': ObjectId("64f920b6b2cbc0a51020266b")
+  }
+}
+sanu> db.items.find()
+[
+  {
+    _id: ObjectId("64f91f7cb2cbc0a510202669"),
+    name: 'Supriyo Das',
+    dob: '23/07/1987',
+    age: 35,
+    gender: 'Male',
+    occupation: 'Web Developer'
+  },
+  {
+    _id: ObjectId("64f920b6b2cbc0a51020266a"),
+    name: 'Rupa Das',
+    dob: '26/08/1995',
+    age: 27,
+    gender: 'Female',
+    occupation: 'Home Maker'
+  },
+  {
+    _id: ObjectId("64f920b6b2cbc0a51020266b"),
+    name: 'Rishika Das',
+    dob: '22/07/2018',
+    age: 5,
+    gender: 'Female',
+    occupation: 'Student'
+  }
+]
+
+sanu> db.items.find()
+[
+  {
+    _id: ObjectId("64f91f7cb2cbc0a510202669"),
+    name: 'Supriyo Das',
+    dob: '23/07/1987',
+    age: 35,
+    gender: 'Male',
+    occupation: 'Web Developer'
+  },
+  {
+    _id: ObjectId("64f920b6b2cbc0a51020266a"),
+    name: 'Rupa Das',
+    dob: '26/08/1995',
+    age: 27,
+    gender: 'Female',
+    occupation: 'Home Maker'
+  },
+  {
+    _id: ObjectId("64f920b6b2cbc0a51020266b"),
+    name: 'Rishika Das',
+    dob: '22/07/2018',
+    age: 5,
+    gender: 'Female',
+    occupation: 'Student'
+  }
+]
+sanu> db.items.find({gender : "Female"})
+[
+  {
+    _id: ObjectId("64f920b6b2cbc0a51020266a"),
+    name: 'Rupa Das',
+    dob: '26/08/1995',
+    age: 27,
+    gender: 'Female',
+    occupation: 'Home Maker'
+  },
+  {
+    _id: ObjectId("64f920b6b2cbc0a51020266b"),
+    name: 'Rishika Das',
+    dob: '22/07/2018',
+    age: 5,
+    gender: 'Female',
+    occupation: 'Student'
+  }
+]
+sanu> db.items.find({age : {$gte : 27}})
+[
+  {
+    _id: ObjectId("64f91f7cb2cbc0a510202669"),
+    name: 'Supriyo Das',
+    dob: '23/07/1987',
+    age: 35,
+    gender: 'Male',
+    occupation: 'Web Developer'
+  },
+  {
+    _id: ObjectId("64f920b6b2cbc0a51020266a"),
+    name: 'Rupa Das',
+    dob: '26/08/1995',
+    age: 27,
+    gender: 'Female',
+    occupation: 'Home Maker'
+  }
+]
+sanu> db.items.find({age : {gt : 27}}, {gender : "Male"})
+
+sanu>  db.items.find({age : {$gt : 27}}, {gender : "Male"})
+[ { _id: ObjectId("64f91f7cb2cbc0a510202669"), gender: 'Male' } ]
+
+
+sanu> use myDB
+switched to db myDB
+myDB> db.items.insertMany([{name : "Supriyo Das", maths : 90, english : 75, bengali : 66}, {name : "Rishika Das", maths:82, english : 55, bengali : 74}, {name : "Rupa Das", maths : 43, english : 62, bengali : 59}, {name : "Sandhya Das", maths : 34, english : 65, bengali : 43, history : 26}, {name : "Jyotshna Mukherjee", maths : 64, english : 46, history : 43}])
+{
+  acknowledged: true,
+  insertedIds: {
+    '0': ObjectId("64fb5472a06b9df668862676"),
+    '1': ObjectId("64fb5472a06b9df668862677"),
+    '2': ObjectId("64fb5472a06b9df668862678"),
+    '3': ObjectId("64fb5472a06b9df668862679"),
+    '4': ObjectId("64fb5472a06b9df66886267a")
+  }
+}
+myDB> db.items.find()
+[
+  {
+    _id: ObjectId("64fb5472a06b9df668862676"),
+    name: 'Supriyo Das',
+    maths: 90,
+    english: 75,
+    bengali: 66
+  },
+  {
+    _id: ObjectId("64fb5472a06b9df668862677"),
+    name: 'Rishika Das',
+    maths: 82,
+    english: 55,
+    bengali: 74
+  },
+  {
+    _id: ObjectId("64fb5472a06b9df668862678"),
+    name: 'Rupa Das',
+    maths: 43,
+    english: 62,
+    bengali: 59
+  },
+  {
+    _id: ObjectId("64fb5472a06b9df668862679"),
+    name: 'Sandhya Das',
+    maths: 34,
+    english: 65,
+    bengali: 43,
+    history: 26
+  },
+  {
+    _id: ObjectId("64fb5472a06b9df66886267a"),
+    name: 'Jyotshna Mukherjee',
+    maths: 64,
+    english: 46,
+    history: 43
+  }
+]
+
+myDB> db.items.find({$or: [{maths : {$gt : 70}}, {bengali : {$lt : 70}}]})
+[
+  {
+    _id: ObjectId("64fb5472a06b9df668862676"),
+    name: 'Supriyo Das',
+    maths: 90,
+    english: 75,
+    bengali: 66
+  },
+  {
+    _id: ObjectId("64fb5472a06b9df668862677"),
+    name: 'Rishika Das',
+    maths: 82,
+    english: 55,
+    bengali: 74
+  },
+  {
+    _id: ObjectId("64fb5472a06b9df668862678"),
+    name: 'Rupa Das',
+    maths: 43,
+    english: 62,
+    bengali: 59
+  },
+  {
+    _id: ObjectId("64fb5472a06b9df668862679"),
+    name: 'Sandhya Das',
+    maths: 34,
+    english: 65,
+    bengali: 43,
+    history: 26
+  }
+]
+myDB> db.items.find({$or: [{maths : {$gt : 70}}, {bengali : {$lt : 50}}]})
+[
+  {
+    _id: ObjectId("64fb5472a06b9df668862676"),
+    name: 'Supriyo Das',
+    maths: 90,
+    english: 75,
+    bengali: 66
+  },
+  {
+    _id: ObjectId("64fb5472a06b9df668862677"),
+    name: 'Rishika Das',
+    maths: 82,
+    english: 55,
+    bengali: 74
+  },
+  {
+    _id: ObjectId("64fb5472a06b9df668862679"),
+    name: 'Sandhya Das',
+    maths: 34,
+    english: 65,
+    bengali: 43,
+    history: 26
+  }
+]
+myDB>
+myDB> show collections
+items
+myDB> db.items.find()
+[
+  {
+    _id: ObjectId("64fb5472a06b9df668862676"),
+    name: 'Supriyo Das',
+    maths: 90,
+    english: 75,
+    bengali: 66
+  },
+  {
+    _id: ObjectId("64fb5472a06b9df668862677"),
+    name: 'Rishika Das',
+    maths: 82,
+    english: 55,
+    bengali: 74
+  },
+  {
+    _id: ObjectId("64fb5472a06b9df668862678"),
+    name: 'Rupa Das',
+    maths: 43,
+    english: 62,
+    bengali: 59
+  },
+  {
+    _id: ObjectId("64fb5472a06b9df668862679"),
+    name: 'Sandhya Das',
+    maths: 34,
+    english: 65,
+    bengali: 43,
+    history: 26
+  },
+  {
+    _id: ObjectId("64fb5472a06b9df66886267a"),
+    name: 'Jyotshna Mukherjee',
+    maths: 64,
+    english: 46,
+    history: 43
+  }
+]
+
+
+myDB> db.items.deleteOne({english : 46})
+{ acknowledged: true, deletedCount: 1 }
+myDB> db.items.find()
+[
+  {
+    _id: ObjectId("64fb5472a06b9df668862676"),
+    name: 'Supriyo Das',
+    maths: 90,
+    english: 75,
+    bengali: 66
+  },
+  {
+    _id: ObjectId("64fb5472a06b9df668862677"),
+    name: 'Rishika Das',
+    maths: 82,
+    english: 55,
+    bengali: 74
+  },
+  {
+    _id: ObjectId("64fb5472a06b9df668862678"),
+    name: 'Rupa Das',
+    maths: 43,
+    english: 62,
+    bengali: 59
+  },
+  {
+    _id: ObjectId("64fb5472a06b9df668862679"),
+    name: 'Sandhya Das',
+    maths: 34,
+    english: 65,
+    bengali: 43,
+    history: 26
+  }
+]
+myDB> db.items.deleteMany({bengali : {$lt : 60}})
+{ acknowledged: true, deletedCount: 2 }
+myDB> db.items.find()
+[
+  {
+    _id: ObjectId("64fb5472a06b9df668862676"),
+    name: 'Supriyo Das',
+    maths: 90,
+    english: 75,
+    bengali: 66
+  },
+  {
+    _id: ObjectId("64fb5472a06b9df668862677"),
+    name: 'Rishika Das',
+    maths: 82,
+    english: 55,
+    bengali: 74
+  }
+]
+
+myDB> use newDB
+switched to db newDB
+newDB> db.items.insertMany([{name: "Samsung 30s", price: 22000, rating: 4.5, qty: 233, sold: 98}, {name: "Moto 30s", price: 29000, rating: 3.5, qty: 133, sold: 598}, {name: "Realme 80s", price: 129000, rating: 2.5, qty: 633, sold: 98, isBigisBig: true}])
+{
+  acknowledged: true,
+  insertedIds: {
+    '0': ObjectId("64fdcf19a31d11a0d3be28dc"),
+    '1': ObjectId("64fdcf19a31d11a0d3be28dd"),
+    '2': ObjectId("64fdcf19a31d11a0d3be28de")
+  }
+}
+newDB> db.items.insertMany([{name: "Samsung 30s", price: 22000, rating: 4.5, qty: 233, sold: 98}, {name: "Moto 30s", price: 29000, rating: 3.5, qty: 133, sold: 598}, {name: "Realme 80s", price: 129000, rating: 2.5, qty: 633, sold: 98, isBig: true}])
+{
+  acknowledged: true,
+  insertedIds: {
+    '0': ObjectId("64fdcf20a31d11a0d3be28df"),
+    '1': ObjectId("64fdcf20a31d11a0d3be28e0"),
+    '2': ObjectId("64fdcf20a31d11a0d3be28e1")
+  }
+}
+newDB> db.items.insertMany([{name: "Samsung 30s", price: 22000, rating: 4.5, qty: 233, sold: 98}, {name: "Moto 30s", price: 29000, rating: 3.5, qty: 133, sold: 598}, {name: "Realme 80s", price: 129000, rating: 2.5, qty: 633, sold: 98, isBig: true}])
+{
+  acknowledged: true,
+  insertedIds: {
+    '0': ObjectId("64fdcf27a31d11a0d3be28e2"),
+    '1': ObjectId("64fdcf27a31d11a0d3be28e3"),
+    '2': ObjectId("64fdcf27a31d11a0d3be28e4")
+  }
+}
+newDB> db.items.find()
+[
+  {
+    _id: ObjectId("64fdcf19a31d11a0d3be28dc"),
+    name: 'Samsung 30s',
+    price: 22000,
+    rating: 4.5,
+    qty: 233,
+    sold: 98
+  },
+  {
+    _id: ObjectId("64fdcf19a31d11a0d3be28dd"),
+    name: 'Moto 30s',
+    price: 29000,
+    rating: 3.5,
+    qty: 133,
+    sold: 598
+  },
+  {
+    _id: ObjectId("64fdcf19a31d11a0d3be28de"),
+    name: 'Realme 80s',
+    price: 129000,
+    rating: 2.5,
+    qty: 633,
+    sold: 98,
+    isBig: true
+  },
+  {
+    _id: ObjectId("64fdcf20a31d11a0d3be28df"),
+    name: 'Samsung 30s',
+    price: 22000,
+    rating: 4.5,
+    qty: 233,
+    sold: 98
+  },
+  {
+    _id: ObjectId("64fdcf20a31d11a0d3be28e0"),
+    name: 'Moto 30s',
+    price: 29000,
+    rating: 3.5,
+    qty: 133,
+    sold: 598
+  },
+  {
+    _id: ObjectId("64fdcf20a31d11a0d3be28e1"),
+    name: 'Realme 80s',
+    price: 129000,
+    rating: 2.5,
+    qty: 633,
+    sold: 98,
+    isBig: true
+  },
+  {
+    _id: ObjectId("64fdcf27a31d11a0d3be28e2"),
+    name: 'Samsung 30s',
+    price: 22000,
+    rating: 4.5,
+    qty: 233,
+    sold: 98
+  },
+  {
+    _id: ObjectId("64fdcf27a31d11a0d3be28e3"),
+    name: 'Moto 30s',
+    price: 29000,
+    rating: 3.5,
+    qty: 133,
+    sold: 598
+  },
+  {
+    _id: ObjectId("64fdcf27a31d11a0d3be28e4"),
+    name: 'Realme 80s',
+    price: 129000,
+    rating: 2.5,
+    qty: 633,
+    sold: 98,
+    isBig: true
+  }
+]
+newDB> db.items.updateOne({name : "Samsung 30s"}, {$set : {price : 12000, rating : 2.5}})
+{
+  acknowledged: true,
+  insertedId: null,
+  matchedCount: 1,
+  modifiedCount: 1,
+  upsertedCount: 0
+}
+newDB> db.items.find()
+[
+  {
+    _id: ObjectId("64fdcf19a31d11a0d3be28dc"),
+    name: 'Samsung 30s',
+    price: 12000,
+    rating: 2.5,
+    qty: 233,
+    sold: 98
+  },
+  {
+    _id: ObjectId("64fdcf19a31d11a0d3be28dd"),
+    name: 'Moto 30s',
+    price: 29000,
+    rating: 3.5,
+    qty: 133,
+    sold: 598
+  },
+  {
+    _id: ObjectId("64fdcf19a31d11a0d3be28de"),
+    name: 'Realme 80s',
+    price: 129000,
+    rating: 2.5,
+    qty: 633,
+    sold: 98,
+    isBig: true
+  },
+  {
+    _id: ObjectId("64fdcf20a31d11a0d3be28df"),
+    name: 'Samsung 30s',
+    price: 22000,
+    rating: 4.5,
+    qty: 233,
+    sold: 98
+  },
+  {
+    _id: ObjectId("64fdcf20a31d11a0d3be28e0"),
+    name: 'Moto 30s',
+    price: 29000,
+    rating: 3.5,
+    qty: 133,
+    sold: 598
+  },
+  {
+    _id: ObjectId("64fdcf20a31d11a0d3be28e1"),
+    name: 'Realme 80s',
+    price: 129000,
+    rating: 2.5,
+    qty: 633,
+    sold: 98,
+    isBig: true
+  },
+  {
+    _id: ObjectId("64fdcf27a31d11a0d3be28e2"),
+    name: 'Samsung 30s',
+    price: 22000,
+    rating: 4.5,
+    qty: 233,
+    sold: 98
+  },
+  {
+    _id: ObjectId("64fdcf27a31d11a0d3be28e3"),
+    name: 'Moto 30s',
+    price: 29000,
+    rating: 3.5,
+    qty: 133,
+    sold: 598
+  },
+  {
+    _id: ObjectId("64fdcf27a31d11a0d3be28e4"),
+    name: 'Realme 80s',
+    price: 129000,
+    rating: 2.5,
+    qty: 633,
+    sold: 98,
+    isBig: true
+  }
+]
+newDB> db.items.updateMany({name : "Samsung 30s"}, {$set : {price : 10000, rating : 1.5}})
+{
+  acknowledged: true,
+  insertedId: null,
+  matchedCount: 3,
+  modifiedCount: 3,
+  upsertedCount: 0
+}
+newDB> db.items.find()
+[
+  {
+    _id: ObjectId("64fdcf19a31d11a0d3be28dc"),
+    name: 'Samsung 30s',
+    price: 10000,
+    rating: 1.5,
+    qty: 233,
+    sold: 98
+  },
+  {
+    _id: ObjectId("64fdcf19a31d11a0d3be28dd"),
+    name: 'Moto 30s',
+    price: 29000,
+    rating: 3.5,
+    qty: 133,
+    sold: 598
+  },
+  {
+    _id: ObjectId("64fdcf19a31d11a0d3be28de"),
+    name: 'Realme 80s',
+    price: 129000,
+    rating: 2.5,
+    qty: 633,
+    sold: 98,
+    isBig: true
+  },
+  {
+    _id: ObjectId("64fdcf20a31d11a0d3be28df"),
+    name: 'Samsung 30s',
+    price: 10000,
+    rating: 1.5,
+    qty: 233,
+    sold: 98
+  },
+  {
+    _id: ObjectId("64fdcf20a31d11a0d3be28e0"),
+    name: 'Moto 30s',
+    price: 29000,
+    rating: 3.5,
+    qty: 133,
+    sold: 598
+  },
+  {
+    _id: ObjectId("64fdcf20a31d11a0d3be28e1"),
+    name: 'Realme 80s',
+    price: 129000,
+    rating: 2.5,
+    qty: 633,
+    sold: 98,
+    isBig: true
+  },
+  {
+    _id: ObjectId("64fdcf27a31d11a0d3be28e2"),
+    name: 'Samsung 30s',
+    price: 10000,
+    rating: 1.5,
+    qty: 233,
+    sold: 98
+  },
+  {
+    _id: ObjectId("64fdcf27a31d11a0d3be28e3"),
+    name: 'Moto 30s',
+    price: 29000,
+    rating: 3.5,
+    qty: 133,
+    sold: 598
+  },
+  {
+    _id: ObjectId("64fdcf27a31d11a0d3be28e4"),
+    name: 'Realme 80s',
+    price: 129000,
+    rating: 2.5,
+    qty: 633,
+    sold: 98,
+    isBig: true
+  }
+]
+

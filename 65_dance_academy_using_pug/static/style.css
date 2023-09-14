@@ -170,7 +170,7 @@
 
 #footer {
     display: flex;
-    height: 15%;
+    height: 40px;
     background-color: black;
     color: white;
     justify-content: center;
