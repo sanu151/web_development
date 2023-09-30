@@ -1,0 +1,72 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Fira Sans', sans-serif;
+    background: url(bg.jpg) no-repeat;
+}
+
+nav {
+    display: flex;
+    background-color: rgb(42, 26, 26);
+    padding: 10px;
+}
+
+.item {
+    list-style: none;
+    padding: 2px 15px;
+    font-size: 1rem;
+}
+
+.item a{
+    text-decoration: none;
+    color: rgb(58, 253, 4);
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.item a:hover {
+    color: yellow;
+    font-size: 1.05rem;
+}
+
+.container {
+    display: block;
+    width: 70%;
+    margin: 5px auto;
+    padding: 40px;
+    background-color: mediumturquoise;
+    border-radius: 12px;
+}
+
+.first {
+    text-align: center;
+    padding: 23px 0;
+    text-decoration: underline;
+}
+
+.second {
+    padding: 10px 0;
+}
+.para {
+    padding: 2px 10px;
+
+}
+
+.lst {
+    margin-left: 40px;
+}
+
+.third {
+    padding: 20px 0;
+}
+
+footer {
+    text-align: right;
+    padding: 10px 50px;
+    background-color: black;
+    color: wheat;
+
+}
